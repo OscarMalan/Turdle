@@ -1,0 +1,67 @@
+body {
+    background-color: #121213;
+    color: #ffffff;
+}
+header {
+    text-align: center;
+    font-size: 38px;
+    font-style: oblique;
+    border-bottom: 4px solid #381a02;
+}
+h1 {
+    margin: 0;
+}
+img {
+    position: fixed; left: 920px; top: 100px;
+    width: 256px;
+    height: 256px;
+}
+.Box_Shape {
+    border: 5px solid rgba(131, 76, 14, 0.562);
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    display: inline-block;
+    position: relative;
+}
+.Box_Row {
+    display: flex;
+    justify-content: center;
+}
+
+/* ::after is where you do the code after
+the object has been rendered */
+.Box_Shape::after {
+    content: attr(data-value);
+    font-size: 49px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -57%);
+}
+
+.Win_Screen {
+    border: 23px solid #14b311;
+    background-color: black;
+    color: #ffffff;
+    height: 340px;
+    width: 480px;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.Lose_Screen {
+    border: 23px solid #381a02;
+    background-color: rgb(131, 76, 14);
+    color: #000000;
+    height: 340px;
+    width: 480px;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
